@@ -1,6 +1,4 @@
-# HorizonNet : 
-
-## Simple code for image classification based on Pytorch
+# HorizonNet : Simple code for image classification based on Pytorch
 
 
 
