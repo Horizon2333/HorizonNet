@@ -15,7 +15,7 @@ Simple code for image classification based on Pytorch
 For training classification models:
 
 ```shell
-python train.py --model ResNet --dataset_path [your_dataset_path]
+python train.py --model ResNet18 --dataset_path [your_dataset_path]
 ```
 
 
