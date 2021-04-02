@@ -11,7 +11,37 @@ Simple code for image classification based on Pytorch
 | GoogLeNet | GoogLeNet, GoogLeNet_aux (with auxiliary branch)             |
 |  ResNet   | ResNet18, ResNet34, ResNet50, ResNet101, ResNet152           |
 | DenseNet  | DenseNet121, DenseNet169, DenseNet201, DenseNet264           |
-| SimpleNet | SimpleNet96                                                  |
+| SimpleNet | SimpleNet96(a simple self-defined convolution neural network) |
+
+## Project structure
+```
+$videoqa_dataset_visualization
+    |──checkpoints              # result image
+        |──xxxx.pth
+    |──logs
+        |──train.txt
+        |──model.txt
+    |──models
+        |──AlexNet.py
+        |──VGG.py
+        |──GoogLeNet.py
+        |──ResNet.py
+        |──DenseNet.py
+        |──SimpleNet.py
+        |──LoadModels.py
+    |──pretrained
+        |──xxxx.pth
+    |──runs
+        |──xxxx
+    |──logger.py
+    |──Horizon.py
+    |──divide_train_val.py
+    |──print_model.py
+    |──train.py
+    |──result.jpg             
+    |──requirements.txt
+    |──readme.md
+```
 
 ## Dataset structure
 
