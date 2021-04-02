@@ -140,4 +140,5 @@ Training progress:
 ![train3](https://github.com/Horizon2333/HorizonNet/blob/main/results/train3.png)
 ![train4](https://github.com/Horizon2333/HorizonNet/blob/main/results/train4.png)
 
-
+Automatically saved chart:
+![chart](https://github.com/Horizon2333/HorizonNet/blob/main/result.jpg)
