@@ -1,0 +1,14 @@
+rich
+torch
+thop
+tensorboardX
+torchvision
+torchscan
+torchstat
+torchsummary
+numpy
+pandas
+matplotlib
+argparse
+tqdm
+
