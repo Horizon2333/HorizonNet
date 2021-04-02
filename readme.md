@@ -16,12 +16,12 @@ Simple code for image classification based on Pytorch
 ## Project structure
 ```
 $videoqa_dataset_visualization
-    |──checkpoints              # result image
+    |──checkpoints              # model checkpoints
         |──xxxx.pth
-    |──logs
-        |──train.txt
-        |──model.txt
-    |──models
+    |──logs                     # console output
+        |──train.log            # train.py console output
+        |──model.log            # print_model.py console output
+    |──models                   # support models
         |──AlexNet.py
         |──VGG.py
         |──GoogLeNet.py
@@ -29,16 +29,16 @@ $videoqa_dataset_visualization
         |──DenseNet.py
         |──SimpleNet.py
         |──LoadModels.py
-    |──pretrained
+    |──pretrained               # save torchvision pretrained model here to save disk space in C:\
         |──xxxx.pth
-    |──runs
+    |──runs                     # tensorboard log
         |──xxxx
-    |──logger.py
-    |──Horizon.py
-    |──divide_train_val.py
-    |──print_model.py
-    |──train.py
-    |──result.jpg             
+    |──logger.py                # produce log file
+    |──Horizon.py               # print me
+    |──divide_train_val.py      # divide training and validation set
+    |──print_model.py           # print model information: layers, params, flops
+    |──train.py                 # train models
+    |──result.jpg               # save result chart
     |──requirements.txt
     |──readme.md
 ```
