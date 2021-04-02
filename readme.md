@@ -2,6 +2,14 @@
 
 Simple code for image classification based on Pytorch
 
+## Features
+- Beautiful console output with tables and progress bar.
+- Automatically print model layers and parameters.
+- Automatically draw a chart for loss and accuracy.
+- Load checkpoints and continue to train.
+- Frozen convolution layers to fine-tune fully-connected layers.
+- Compute and print confusion matrix.
+
 ##  Support models
 
 |  Series   | Models                                                       |
@@ -43,7 +51,9 @@ $videoqa_dataset_visualization
     |──readme.md
 ```
 
-## Dataset structure
+## Prepare dataset
+
+Dataset structure should like:
 
 ```
 $your_dataset_path
@@ -70,6 +80,26 @@ $your_dataset_path
             |──xxxx.jpg
             |──...
 ```
+
+If you have a dataset like:
+```
+$your_dataset_path
+    |──class1
+        |──xxxx.jpg
+        |──...
+    |──class2
+        |──xxxx.jpg
+        |──...
+    |──...
+    |──classN
+        |──xxxx.jpg
+        |──...
+```
+You can run
+```shell
+python divide_train_val.py --initial_dataset {your dataset path} --output {output path} train_percentage 70
+```
+```70``` means take 70% of whole dataset into training set, 30% into validation set.
 
 ## Install
 
