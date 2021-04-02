@@ -41,10 +41,15 @@ $videoqa_dataset_visualization
         |──xxxx.pth
     |──runs                     # tensorboard log
         |──xxxx
+    |──results                  # material pictures
+        |──train1.png
+        |──train2.png
+        |──train3.png
+        |──train4.png
     |──logger.py                # produce log file
     |──Horizon.py               # print me
     |──divide_train_val.py      # divide training and validation set
-    |──print_model.py           # print model information: layers, params, flops
+    |──printmodel.py            # print model information: layers, params, flops
     |──train.py                 # train models
     |──result.jpg               # save result chart
     |──requirements.txt
@@ -121,5 +126,18 @@ To train classification models:
 python train.py --model ResNet18 --dataset_path [your_dataset_path]
 ```
 
+To print models:
+```shell
+python printmodel.py --model ResNet18 --dataset_path [your_dataset_path]
+```
+
+## Results
+
+Training progress:
+
+![train1](https://github.com/Horizon2333/HorizonNet/blob/main/results/train1.png)
+![train2](https://github.com/Horizon2333/HorizonNet/blob/main/results/train2.png)
+![train3](https://github.com/Horizon2333/HorizonNet/blob/main/results/train3.png)
+![train4](https://github.com/Horizon2333/HorizonNet/blob/main/results/train4.png)
 
 
