@@ -443,7 +443,7 @@ if(__name__ == "__main__"):
         plt.xlabel("epoch")
         plt.ylabel("loss")
         plt.xlim((0,args.epoch)) 
-        plt.ylim([0, float('%.1g' % (2*max_loss))])
+        plt.ylim([0, float('%.1g' % (1.2*max_loss))])
         plt.scatter(x, train_losses,label="train", s=9)
         plt.scatter(x, validation_losses,label="validation", s=9)
         plt.legend()    
