@@ -406,7 +406,7 @@ if(__name__ == "__main__"):
             start_time = time.time()
             torch.save(model.state_dict(), os.path.join(args.save_path, args.model + '_model_{}.pth'.format('best_acc')))
             end_time = time.time()
-            print('Saved best acc model!  Save cost: {:5f}. Best acc :{:5f}. '.format(end_time - start_time, best_acc))
+            print('Saved best acc model!  Save cost: {:2f} s. Best acc :{:5f}. '.format(end_time - start_time, best_acc))
         
         if(best_loss == 0):
             best_loss = val_loss / len(val_dataloader)
@@ -414,20 +414,20 @@ if(__name__ == "__main__"):
             start_time = time.time()
             torch.save(model.state_dict(), os.path.join(args.save_path, args.model + '_model_{}.pth'.format('best_loss')))
             end_time = time.time()
-            print('Saved best loss model! Save cost: {:5f}. Best loss:{:5f}. '.format(end_time - start_time, best_loss))
+            print('Saved best loss model! Save cost: {:2f} s. Best loss:{:5f}. '.format(end_time - start_time, best_loss))
         elif(best_loss > val_loss / len(val_dataloader)):
             best_loss = val_loss / len(val_dataloader)
             best_loss_epoch = epoch + 1
             start_time = time.time()
             torch.save(model.state_dict(), os.path.join(args.save_path, args.model + '_model_{}.pth'.format('best_loss')))
             end_time = time.time()
-            print('Saved best loss model! Save cost: {:5f}. Best loss:{:5f}. '.format(end_time - start_time, best_loss))
+            print('Saved best loss model! Save cost: {:2f} s. Best loss:{:5f}. '.format(end_time - start_time, best_loss))
         
         if(args.save_interval != 0 and (epoch + 1) % args.save_interval == 0):
             start_time = time.time()
             torch.save(model.state_dict(), os.path.join(args.save_path, args.model + '_model_{}.pth'.format(epoch + 1)))
             end_time = time.time()
-            print('Saved epoch {} model!. Save cost:{:5f}'.format(epoch + 1, end_time - start_time))
+            print('Saved epoch {} model!. Save cost:{:2f} s'.format(epoch + 1, end_time - start_time))
         
         if(train_loss/len(train_dataloader) > max_loss):
             max_loss = train_loss/len(train_dataloader)
