@@ -358,7 +358,7 @@ if(__name__ == "__main__"):
 
     else:
         best_acc = 0
-        best_loss = 0
+        best_loss = None
     
     best_acc_epoch = 0
     best_loss_epoch = 0
@@ -408,7 +408,7 @@ if(__name__ == "__main__"):
             end_time = time.time()
             print('Saved best acc model!  Save cost: {:2f} s. Best acc :{:5f}. '.format(end_time - start_time, best_acc))
         
-        if(best_loss == 0):
+        if not best_loss:
             best_loss = val_loss / len(val_dataloader)
             best_loss_epoch = epoch + 1
             start_time = time.time()
