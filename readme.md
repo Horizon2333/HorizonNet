@@ -102,7 +102,7 @@ $your_dataset_path
 ```
 You can run
 ```shell
-python divide_train_val.py --initial_dataset {your dataset path} --output {output path} train_percentage 70
+python divide_train_val.py --initial_dataset {your dataset path} --output {output path} --train_percentage 70
 ```
 ```70``` means take 70% of whole dataset into training set, 30% into validation set.
 
