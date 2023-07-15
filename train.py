@@ -456,6 +456,8 @@ if(__name__ == "__main__"):
         plt.scatter(x, train_accs,label="train", s=9)
         plt.scatter(x, validation_accs,label="validation", s=9) 
         plt.legend()   
+
+        plt.tight_layout()
         
         plt.savefig('result.jpg')
         plt.close()
